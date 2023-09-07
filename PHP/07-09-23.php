@@ -28,43 +28,46 @@ switch ($h) {
 
 
 //loops
-echo "<br>WHILE loop <br>";
+echo "<h5><br>WHILE loop</h5>";
 $counter = 1;
 while ($counter <= 5) {
     echo "Tere $counter. matkaja <br>";
     $counter++;
 }
 
-echo "<br>DO WHILE loop <br>";
+echo "<h5><br>DO WHILE loop</h5>";
 $counter = 1;
 do {
     echo "Tere $counter. matkaja <br>";
     $counter++;
 } while ($counter <= 2);
 
-echo "<br>FOR loop <br>";
+echo "<h5><br>FOR loop</h5>";
 for($i = 1; $i <= 5; $i++) {
     echo "Tere $i. matkaja <br>";
 }
 
-echo "<br>FOR EACH loop <br>";
+echo "<h5><br>FOR EACH loop</h5>";
 $numbers = [1,2,3,4,5];
 foreach($numbers as $index => $number) {
     echo "$index) Tere $number. matkaja <br>";
 }
 
 
-echo "<br>FIZZ BUZZ FIZZBUZZ<br>";
-for($i = 1; $i <= 100; $i++) {
+echo "<h5><br>Fizz Buzz FizzBuzz</h5>";
+for($i = 1; $i <= 250; $i++) {
+    $result;
     if ($i % 3 == 0 && $i % 5 == 0) {
-        echo "FizzBuzz<br> ";
+        $result = "FizzBuzz";
     } elseif ($i % 3 == 0) {
-        echo "Fizz ";
+        $result = "Fizz";
     } elseif ($i % 5 ==0) {
-        echo "Buzz ";
+        $result = "Buzz";
     } else {
-        echo $i . " ";
+        $result = $i;
     }
+    if ($i % 16 == 0) { $result .= "<br>";}
+    echo "$result ";
 }
 
 ?>
