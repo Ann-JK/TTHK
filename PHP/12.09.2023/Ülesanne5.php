@@ -22,7 +22,7 @@
         }
 
 
-        echo "<h3>Tüdrukud II</h3>";
+        echo "<br><h3>Tüdrukud II</h3>";
 
         for ($i = 0; $i < 3; $i++) {
             echo "$tüdrukuteNimed[$i] <br>";
@@ -131,9 +131,9 @@
             if (in_array($otsitavNimi1, $firmad)) {
                 unset($firmad[array_search($otsitavNimi1, $firmad)]);
     
-                echo "<br><b>NB!</b> Firma nimed pärast nime $otsitavNimi1 eemaldamist: <br>";
+                echo "<b>NB!</b> Firma nimed pärast nime $otsitavNimi1 eemaldamist: <br>";
             } else {
-                echo "<br><b>NB!</b> Sisestatud nime ei olnud antud nimekirjas: <br>";
+                echo "<b>NB!</b> Sisestatud nime ei olnud antud nimekirjas: <br>";
             }
 
             foreach($firmad as $firma) {
@@ -147,6 +147,7 @@
         }
     ?>
 
+    <a></a>
     <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
         <label for="otsitavNimi1">Sisesta firma nimi, mida soovid nimekirjast eemaldada, 
             vaid üks on võimalik nimekirjast välja võtta: </label>
@@ -154,8 +155,6 @@
         <input type="text" id="otsitavNimi1" name="otsitavNimi1"> <!-- Corrected name attribute -->
         <button type="submit">Sisesta</button>
     </form>
-
-
 
     <?php
 
@@ -215,11 +214,51 @@
         }
     ?>
 
+    <a></a>
     <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
         <label for="otsitavNimi2">Sisesta perekonnanimi, mida soovid otsida: </label>
         <br>
         <input type="text" id="otsitavNimi2" name="otsitavNimi2">
         <button type="submit">Sisesta</button>
     </form>
+
+    <?php
+        echo "<br><h3>Pildid</h3>";
+
+        $pildiKaust = "img/";
+        $piltideMassiiv = [];
+
+
+        if ($handle = opendir($pildiKaust)) {
+            while (false !== ($fail = readdir($handle))) {
+                $failitüüp = strtolower(pathinfo($fail, PATHINFO_EXTENSION));
+                if ($failitüüp == "webp") {
+                    array_push($piltideMassiiv, $fail);
+                }   
+            }
+        }   
+        closedir($handle);
+
+        echo "Kuvatud kolmas pilt massiivist: <br>";
+        echo "<br><img src='" . $pildiKaust . $piltideMassiiv[2] . "' alt='" . $piltideMassiiv[2] . "' width='150' height='150'><br>";
+
+        echo "<br>Kuvatud kõik pildid massiivist: <br><br>";
+        foreach ($piltideMassiiv as $pilt) {
+            echo "<img src='" . $pildiKaust . $pilt . "' alt='" . $pilt . "' width='150' height='150'>";
+        }
+        echo "<br>";
+
+        
+        echo "<br>Kuvatud kõik pildid bootstrapi abil kuues veerus: <br><br>";
+        echo '<div class="row">';
+
+        foreach ($piltideMassiiv as $pilt) {
+            echo '<div class="col-md-2 mb-3">';
+            echo '<img src="' . $pildiKaust . $pilt . '" class="img-fluid" alt="Image">';
+            echo '</div>';
+        }
+    
+        echo '</div>';
+    ?>
     </body> 
 </html>
