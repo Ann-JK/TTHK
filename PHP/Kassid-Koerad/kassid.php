@@ -27,7 +27,7 @@ $kask->execute();
 <?php
 
 if(isSet($_REQUEST["id"])) {
-    $kask=
+    $kask=$yhendus->prepare("SELECT id, ")
 }
 
 while($kask->fetch()){
