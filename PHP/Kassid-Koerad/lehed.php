@@ -1,42 +1,48 @@
 <?php
+require ($_SERVER["DOCUMENT_ROOT"]."/../config.php");
 
-$yhendus=new mysqli("localhost", "juku", "kala", "jukubaas2");
+global $yhendus;
+
+$yhendus=new mysqli("localhost", "juku", "kala", "d120915sd507750");
 
 ?>
 
-<!doctype html>
+<!DOCTYPE html>
 
 <html>
 
+<html lang="en">
+
 <head>
 
-<title>Teated lehel</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial scale=1.0">
 
-<style type="text/css">
+    <title>Teated lehel</title>
 
-#menyykiht{
+    <style type="text/css">
 
-float: left;
+        #menyykiht{
 
-padding-right: 30px;
+            float: left;
 
-}
+            padding-right: 30px;
 
-#sisukiht{
+        }
 
-float:left;
+        #sisukiht{
 
-}
+            float:left;
 
-#jalusekiht{
+        }
 
-clear: left;
+        #jalusekiht{
 
-}
+            clear: left;
 
-</style>
+        }
 
-<meta charset="utf-8" />
+    </style>
 
 </head>
 
@@ -58,9 +64,9 @@ $kask->execute();
 
 while($kask->fetch()){
 
-echo "<li><a href='?id=$id'>".
+    echo "<li><a href='?id=$id'>".
 
-htmlspecialchars($pealkiri)."</a></li>";
+    htmlspecialchars($pealkiri)."</a></li>";
 
 }
 
@@ -76,31 +82,31 @@ htmlspecialchars($pealkiri)."</a></li>";
 
 if(isSet($_REQUEST["id"])){
 
-$kask=$yhendus->prepare("SELECT id, pealkiri, sisu FROM lehed
+    $kask=$yhendus->prepare("SELECT id, pealkiri, sisu FROM lehed
 
-WHERE id=?");
+    WHERE id=?");
 
-$kask->bind_param("i", $_REQUEST["id"]);
+    $kask->bind_param("i", $_REQUEST["id"]);
 
-$kask->bind_result($id, $pealkiri, $sisu);
+    $kask->bind_result($id, $pealkiri, $sisu);
 
-$kask->execute();
+    $kask->execute();
 
-if($kask->fetch()){
+    if($kask->fetch()){
 
-echo "<h2>".htmlspecialchars($pealkiri)."</h2>";
+        echo "<h2>".htmlspecialchars($pealkiri)."</h2>";
 
-echo htmlspecialchars($sisu);
+        echo htmlspecialchars($sisu);
+
+    } else {
+
+        echo "Vigased andmed.";
+
+    }
 
 } else {
 
-echo "Vigased andmed.";
-
-}
-
-} else {
-
-echo "Tere tulemast avalehele! Vali men&uuml;&uuml;st sobiv teema.";
+    echo "Tere tulemast avalehele! Vali men&uuml;&uuml;st sobiv teema.";
 
 }
 
@@ -110,7 +116,7 @@ echo "Tere tulemast avalehele! Vali men&uuml;&uuml;st sobiv teema.";
 
 <div id="jalusekiht">
 
-Lehe tegi Jaagup
+    Lehe tegi Jaagup
 
 </div>
 

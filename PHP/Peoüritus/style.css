@@ -1,0 +1,212 @@
+/*
+Theme Name: Gringo Mobi
+Theme URI: http://mobifreaks.com/mobile templates/
+Author: Munawar Ahmed
+Author URI: http://mobifreaks.com/
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+*/
+@charset "utf-8";
+body{
+	background:#ffffff;
+	font-family:Arial, Helvetica, sans-serif;
+	margin:0;
+	padding:0;
+}
+#header{
+	margin:0 auto;
+	}
+.nav{
+	font-size:14px; 
+    background:#2d2d2d; 
+    -moz-border-bottom-left-radius:6px;
+    -webkit-border-bottom-left-radius:6px;
+    border-bottom-left-radius:6px; 
+    -moz-border-bottom-right-radius:6px;
+    -webkit-border-bottom-right-radius:6px;
+    border-bottom-right-radius:6px;
+    margin:0 5px;
+	}
+.nav ul{
+	list-style-type:none;
+    margin:0;
+	padding:0;
+	}
+.nav ul li{
+	display:inline;
+	margin:0;
+	padding:0;
+	}
+.nav ul li:first-child{
+	margin:0 0 0 5px;
+	}
+.nav ul li:last-child{
+	margin:0 5px 0 0;
+	}
+.nav ul li a{
+	display:inline-block;
+	color:#f2f2f2;
+	padding:10px;
+	text-decoration:none;
+	}
+.nav ul li a:hover{
+	color:#565656;
+	}
+
+/* Dropdown container */
+#header .nav .dropdown {
+    position: relative;
+    display: inline-block;
+}
+/* Dropdown content */
+.dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #2d2d2d; 
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+/* Dropdown links */
+.dropdown .dropdown-content a {
+    padding: 12px;
+    text-decoration: none;
+    display: block;
+    color:#f2f2f2;
+}
+/* Dropdown links on hover */
+.dropdown-content a:hover {
+   color:#565656;
+}
+/* Show the dropdown content when hovering over the dropdown container */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.logo{
+	text-align:center;
+	margin:0;
+	padding:5px;
+}
+.logo img{
+	border:none;
+	}
+h2{
+	font-size:16px;
+	font-weight:bold;
+	color:#9b9b9b;
+	border:#aaaaaa 1px dashed;
+	padding:5px;
+	margin:0 5px;
+	}
+p{
+	text-align:left;
+	font-size:12px;
+	color:#2d2d2d;
+	margin:5px;
+	padding:0;
+	line-height:20px;
+	}
+p a{
+    color:#3c9ddb;
+    text-decoration:none;
+	}
+p a:hover{
+    color:#4d4444;
+    }
+.right{
+	float:right;
+	margin:5px 10px 5px 0;
+	font-size:12px;
+	}
+.right a{
+	color:#88aa00;
+    text-decoration:none;
+	padding:5px;
+	}
+.nav2{
+	font-size:14px; 
+    background:#2d2d2d; 
+    -moz-border-top-left-radius:6px;
+    -webkit-border-top-left-radius:6px;
+    border-top-left-radius:6px; 
+    -moz-border-top-right-radius:6px;
+    -webkit-border-top-right-radius:6px;
+    border-top-right-radius:6px;
+    margin:0 5px;
+	}
+.nav2 p{
+	text-align:center;
+	color:#f2f2f2;
+	margin:0 5px;
+	padding:5px 0;
+	}
+.nav2 p a{
+	display:inline-block;
+	color:#88aa00;
+	padding:5px;
+	text-decoration:none;
+	}
+.nav2 p a:hover{
+	color:#565656;
+	}
+.clear{
+	clear:both;
+}
+.container{
+	width: 100vw;
+	height: 100vh;
+	overflow-y: auto;
+}
+.container .submitForm{
+	width: 25vw;
+	margin-left:15px;
+    padding-left:30px;
+}
+.container .submitForm .form-item{
+	width: 100%;
+	height: auto;
+	margin-bottom: 5px;
+}
+.container .submitForm .form-item .form-label {
+	width: 100%;
+	height: auto;
+	display: block;
+	padding: 5px;
+	margin-bottom: 5px;
+}
+.container .submitForm .form-item .form-control{
+	width: 100%;
+    height: auto;
+	display: block;
+	padding: 5px;
+	margin-bottom: 5px;
+    border: 1px solid black;
+    border-radius: 4px;
+	box-sizing: border-box;
+}
+.container .submitForm .form-item .form-data{
+	width: 100%;
+    height: auto;
+	display: block;
+	padding: 5px;
+	margin-bottom: 2px;
+}
+.container .submitForm .data-item{
+	width: 100%;
+	height: auto;
+	padding:5px;
+	margin-bottom: 10px;
+}
+.btn{
+	padding-top: 15px;
+    padding-bottom: 15px;
+	margin-top: 5px;
+	margin-left: 5px;
+}
+.btn-primary{
+	color:#88aa00;
+}
+button.btn-danger{
+	font-weight: bold;
+	margin-top: 5px;
+}

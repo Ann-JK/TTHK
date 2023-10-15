@@ -1,5 +1,9 @@
 <?php
 
+require ($_SERVER["DOCUMENT_ROOT"]."/../config.php");
+
+global $yhendus;
+
 $yhendus=new mysqli("localhost", "juku", "kala", "d120915sd507750");
 
 $kask=$yhendus->prepare("SELECT id, kassinimi, toon FROM kassid");
@@ -22,19 +26,17 @@ $kask->execute();
 
 <body>
 
-<h1>Kassude loetelu</h1>
+<h1>Kasside loetelu</h1>
 
 <?php
 
-if(isSet($_REQUEST["id"])) {
-    $kask=$yhendus->prepare("SELECT id, ")
-}
-
 while($kask->fetch()){
 
-echo "<div>".htmlspecialchars($kassinimi)."</div>";
+    echo "<div>".htmlspecialchars($id)."<div>";
 
-echo "<div>".htmlspecialchars($toon)."</div>";
+    echo "<div style='color: $toon;'>".htmlspecialchars($kassinimi)."</div>";
+
+    echo "<div>".htmlspecialchars($toon)."</div>";
 
 }
 
