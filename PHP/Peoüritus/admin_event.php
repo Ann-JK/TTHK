@@ -1,5 +1,4 @@
 <?php
-session_start();
 require($_SERVER["DOCUMENT_ROOT"]."/config.php");
 global $yhendus;
 
@@ -62,7 +61,7 @@ $kask->execute();
 
 <form class="submitForm" method="POST" action="">
 
-    <div class="form-item">
+    <div class="form-group">
 
         <label for="sündmus" class="form-label">Sündmus</label>
 
@@ -70,19 +69,16 @@ $kask->execute();
 
     </div>
     
-    <br>
-
-    <div class="form-item">
+    <div class="form-group">
 
         <label for="aeg" class="form-label">Algusaeg</label>
 
         <input type="time" class="form-control" id="aeg" name="aeg" step="60" value="12:00" placeholder="Sisesta sündmuse algusaeg" required>
 
     </div> 
-    
-    <br>
 
-    <div class="form-item">
+
+    <div class="form-group">
 
         <button type="submit" name="submitEvent" class="btn btn-danger">Lisa sündmus</button>
 
@@ -102,17 +98,17 @@ $kask->execute();
 
     <?php while($kask->fetch()) { ?>
 
-        <div class='data-item'>
+        <div>
 
             <form method="post">
 
-                <div class='form-data'>
+                <div>
 
                     Sündmus: <?php echo htmlspecialchars($syndmus); ?>
 
                 </div>
 
-                <div class='form-data'>
+                <div>
 
                     Algusaeg: <?php echo date('H:i', strtotime($aeg)); ?>
 

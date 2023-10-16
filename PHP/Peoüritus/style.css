@@ -82,14 +82,6 @@ body{
 .dropdown:hover .dropdown-content {
     display: block;
 }
-.logo{
-	text-align:center;
-	margin:0;
-	padding:5px;
-}
-.logo img{
-	border:none;
-	}
 h2{
 	font-size:16px;
 	font-weight:bold;
@@ -157,54 +149,11 @@ p a:hover{
 	height: 100vh;
 	overflow-y: auto;
 }
-.container .submitForm{
-	width: 25vw;
-	margin-left:15px;
-    padding-left:30px;
-}
-.container .submitForm .form-item{
-	width: 100%;
-	height: auto;
-	margin-bottom: 5px;
-}
-.container .submitForm .form-item .form-label {
-	width: 100%;
-	height: auto;
-	display: block;
-	padding: 5px;
-	margin-bottom: 5px;
-}
-.container .submitForm .form-item .form-control{
-	width: 100%;
-    height: auto;
-	display: block;
-	padding: 5px;
-	margin-bottom: 5px;
-    border: 1px solid black;
-    border-radius: 4px;
-	box-sizing: border-box;
-}
-.container .submitForm .form-item .form-data{
-	width: 100%;
-    height: auto;
-	display: block;
-	padding: 5px;
-	margin-bottom: 2px;
-}
-.container .submitForm .data-item{
-	width: 100%;
-	height: auto;
-	padding:5px;
-	margin-bottom: 10px;
-}
 .btn{
 	padding-top: 15px;
     padding-bottom: 15px;
 	margin-top: 5px;
 	margin-left: 5px;
-}
-.btn-primary{
-	color:#88aa00;
 }
 button.btn-danger{
 	font-weight: bold;

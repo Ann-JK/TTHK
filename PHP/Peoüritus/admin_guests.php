@@ -1,7 +1,6 @@
 <?php
 require($_SERVER["DOCUMENT_ROOT"]."/config.php");
 global $yhendus;
-session_start();
 
 if (isset($_POST["kustutus"])) {
 
@@ -36,23 +35,23 @@ $kask->execute();
 <div class="guestForm">
     <?php while($kask->fetch()) { ?>
 
-        <div class='data-item'>
+        <div>
 
             <form method="post">
 
-                <div class='form-data'>
+                <div>
 
                     Eesnimi: <?php echo htmlspecialchars($eesnimi); ?>
 
                 </div>
 
-                <div class='form-data'>
+                <div>
 
                     Perekonnanimi: <?php echo htmlspecialchars($perekonnanimi); ?>
 
                 </div>
 
-                <div class='form-data'>
+                <div>
 
                     E-mail: <?php echo htmlspecialchars($email); ?>
 

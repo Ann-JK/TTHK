@@ -1,5 +1,4 @@
 <?php
-session_start();
 require($_SERVER["DOCUMENT_ROOT"]."/config.php");
 global $yhendus;
 
@@ -19,17 +18,17 @@ $kask->execute();
 
     <?php while($kask->fetch()) { ?>
 
-        <div class='data-item'>
+        <div>
 
             <form>
 
-                <div class='form-data'>
+                <div>
 
                     <?php echo date('H:i', strtotime($aeg)); ?>
 
                 </div>
 
-                <div class='form-data'>
+                <div>
 
                     <?php echo htmlspecialchars($syndmus); ?>
 

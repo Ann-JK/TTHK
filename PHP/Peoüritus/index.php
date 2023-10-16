@@ -1,7 +1,6 @@
 <?php
 require($_SERVER["DOCUMENT_ROOT"]."/config.php");
 global $yhendus;
-session_start();
 
 require("header.php");
 ?>

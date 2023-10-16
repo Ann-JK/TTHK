@@ -1,5 +1,4 @@
 <?php
-session_start();
 require($_SERVER["DOCUMENT_ROOT"]."/config.php");
 global $yhendus;
 
@@ -30,37 +29,31 @@ if (isset($_POST['submitGuest'])) {
 
 <form class="submitForm" method="POST" action="">
 
-    <div class="form-item">
+    <div class="form-group">
 
         <label for="eesnimi" class="form-label">Eesnimi</label>
 
         <input type="text" class="form-control" id="eesnimi" name="eesnimi" placeholder="Sisesta eesnimi" required>
 
     </div>
-    
-    <br>
 
-    <div class="form-item">
+    <div class="form-group">
 
         <label for="perekonnanimi" class="form-label">Perekonnanimi</label>
 
         <input type="text" class="form-control" id="perekonnanimi" name="perekonnanimi" placeholder="Sisesta perekonnanimi" required>
 
     </div> 
-    
-    <br>
 
-    <div class="form-item">
+    <div class="form-group">
 
         <label for="email" class="form-label">Emailiaadress</label>
 
         <input type="email" class="form-control" id="email" name="email" placeholder="Sisesta emailiaadress" required>
 
     </div>
-    
-    <br>
 
-    <div class="form-item">
+    <div class="form-group">
 
         <button type="submit" name="submitGuest" class="btn btn-danger">Registreeru</button>
 
