@@ -1,0 +1,44 @@
+#header {
+    background-color: #333;
+    padding: 10px;
+}
+.nav ul {
+    list-style: none;
+    padding-left: 30px;
+    padding-top: 10px;
+}
+.nav li {
+    display: inline;
+    margin-right: 20px;
+}
+.nav a {
+    color: white;
+    text-decoration: none;
+}
+.nav a:hover {
+    text-decoration: none;
+    color: rgb(250, 118, 103);
+}
+.nav2 {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+.larger-text {
+    font-size: 18px;
+}
+button {
+    font-weight: bold;
+    background-color: rgb(250, 118, 103);
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background-color: rgb(255, 143, 143);
+}
+h2 {
+    font-weight: bold;
+}
